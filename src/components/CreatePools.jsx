@@ -8,7 +8,7 @@ import useHandleApproval from "../hooks/useHandleApproval";
 
 
 
-const Pools = () => {
+const CreatePools = () => {
     const [rate, setRate] = useState("")
 
     const { isConnected } = useWeb3ModalAccount()
@@ -38,7 +38,7 @@ const Pools = () => {
                             <Dialog.Content style={{ maxWidth: 450 }}>
                                 <Dialog.Title>Staking Pool Creation</Dialog.Title>
                                 <Dialog.Description size="2" mb="4">
-                                    To create a pool, first approve this contract to spend your reward token
+                                    To create a pool, you should approve this contract to spend your reward token
                                 </Dialog.Description>
 
                                 <Flex direction="column" gap="3">
@@ -75,4 +75,4 @@ const Pools = () => {
     )
 }
 
-export default Pools
+export default CreatePools

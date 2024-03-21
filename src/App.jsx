@@ -2,7 +2,7 @@ import { configWeb3Modal } from "./connection"
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from "react-toastify";
 import Header from "./components/Header";
-import Pools from "./components/Pools";
+import CreatePools from "./components/CreatePools";
 import '@radix-ui/themes/styles.css';
 
 
@@ -14,7 +14,7 @@ function App() {
   return (
     <main className="w-full min-h-screen bg-white-950">
       <Header />
-      <Pools />
+      <CreatePools/>
       <ToastContainer />
     </main>
   )
