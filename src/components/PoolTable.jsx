@@ -27,8 +27,8 @@ const PoolTable = () => {
 
     return (
         <div className="w-full overflow-x-scroll mt-4">
-            <table className="table-auto w-full border-collapse border border-slate-500">
-                <thead className="text-slate-100 py-2 bg-green-500">
+            <table className="table-auto w-full border-collapse border border-slate-700">
+                <thead className="text-slate-100 py-2 bg-blue-800">
                     <tr>
                         <th className="py-3 font-light">S/N</th>
                         <th className="py-3 font-light">Pools</th>
@@ -40,22 +40,22 @@ const PoolTable = () => {
                         <th className="py-3 font-light">Claim Action</th>
                     </tr>
                 </thead>
-                <tbody className="text-slate-200 bg-black">
+                <tbody className="text-slate-200 bg-white">
                     {
                         data.map((item, index) => (
                             <tr key={index}>
-                                <td className="border border-slate-700 p-3 text-center">{index}</td>
-                                <td className="border border-slate-700 p-3 text-center">Pool #{index}</td>
-                                <td className="border border-slate-700 p-3 text-center">{Number(item.totalStakers.toString())}</td>
-                                <td className="border border-slate-700 p-3 text-center">{formatter(item.totalStaked)}</td>
-                                <td className="border border-slate-700 p-3 text-center">{formatter(item.rewardReserve)}</td>
-                                <td className="border border-slate-700 p-3 text-center">{Number(item.rewardRate)}</td>
+                                <td className="border border-slate-400 p-2 text-center text-sky-950">{index}</td>
+                                <td className="border border-slate-400 p-2 text-center text-sky-950">Pool #{index}</td>
+                                <td className="border border-slate-400 p-2 text-center text-sky-950">{Number(item.totalStakers.toString())}</td>
+                                <td className="border border-slate-400 p-2 text-center text-sky-950">{formatter(item.totalStaked)}</td>
+                                <td className="border border-slate-400 p-2 text-center text-sky-950">{formatter(item.rewardReserve)}</td>
+                                <td className="border border-slate-400 p-2 text-center text-sky-950">{Number(item.rewardRate)}</td>
                                 <td className="flex flex-col gap-2 justify-center items-center border border-slate-700 p-3 text-center">
-                                    <button onClick={handleApproval} className="bg-green-600 flex items-center gap-1 text-sm px-6 py-1.5 rounded text-slate-100">Approve
+                                    <button onClick={handleApproval} className="bg-blue-900 flex items-center gap-1 text-sm px-6 py-1.5 rounded text-slate-100">Approve
                                     </button>
                                     <Dialog.Root>
                                         <Dialog.Trigger>
-                                            <button className="bg-green-500 flex items-center gap-1 text-sm px-6 py-1.5 rounded text-slate-100">Stake
+                                            <button className="bg-blue-700 flex items-center gap-1 text-sm px-6 py-1.5 rounded text-slate-100">Stake
                                             </button>
 
                                         </Dialog.Trigger>
@@ -93,9 +93,9 @@ const PoolTable = () => {
                                     </Dialog.Root>
                                 </td>
                                 <td className="flex flex-col gap-2 justify-center items-center border border-slate-700 p-3 text-center">
-                                    <button onClick={() => handleRewardClaim(item.index)} className="bg-yellow-600 flex items-center gap-1 text-sm px-6 py-1.5 rounded text-slate-100">Claim Reward
+                                    <button onClick={() => handleRewardClaim(item.index)} className="bg-blue-500 flex items-center gap-1 text-sm px-6 py-1.5 rounded text-slate-100">Claim Reward
                                     </button>
-                                    <button onClick={() => handleUnstake(item.index)} className="bg-yellow-600 flex items-center gap-1 text-sm px-6 py-1.5 rounded text-slate-100">Unstake
+                                    <button onClick={() => handleUnstake(item.index)} className="bg-blue-500 flex items-center gap-1 text-sm px-6 py-1.5 rounded text-slate-100">Unstake
                                     </button>
                                 </td>
                             </tr>

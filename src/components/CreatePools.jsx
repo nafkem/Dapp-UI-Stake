@@ -19,7 +19,7 @@ const CreatePools = () => {
 
     return (
         <MaxWidth className={`w-full md:px-6 mt-10`}>
-            <section className="w-full flex flex-col md:p-8 p-6 bg-black-900 rounded-md">
+            <section className="w-full flex flex-col md:p-8 p-6 bg-blue-200 rounded-md">
                 <div className="w-full flex justify-between items-center border-b border-slate-500/50 pb-6">
 
                     <div >
